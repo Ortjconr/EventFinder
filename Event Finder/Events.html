@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <div class="topnav">
+
+  <title>Event Finder!</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+
+  <link rel="stylesheet" href="Events.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">FED</a>
+    <div class="navbar-nav">
+      <ul>
+        <a href="Home.html">Home</a>
+        <a href="OurMission.html">Our Mission</a>
+        <a href="Events.html">Events Nearby</a>
+        <a href="ContactUs.html">Contact Us</a>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <div class="jumbotron text-center hero-background-img">
+    <h1><u><b>Find Your Next Event!</b></u></h1>
+    <p class="lead">Locate the nearest Farm.</p>
+  </div>
+</div>
+<div class="topnav">
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search Nearby" name="search">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="container mb-5 mt-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <p class="lead"></p>
+        <div id="googleMap" style="width:350%;height:500px;"></div>
+
+  <script>
+  function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(37.7749,122.4194),
+    zoom:5,
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4BBO-UERXScV5n_5Zd7lsiwhlVCzV_Q&callback=myMap"></script>
+
+        </p>
+      <!-- CALL TO ACTION-->
+  <div class="jumbotron text-center mb-0">
+        <p class="lead mb-4">Sign Up for Email Alerts</p>
+        <div class="d-flex justify-content-center">
+          <form action="#" class='form-inline'>
+            <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Email"/>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <div class="bg-secondary p-5 text-white">
+        &copy; 2019 Launch Page INC
+      </div>
